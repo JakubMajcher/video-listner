@@ -1,0 +1,74 @@
+{
+  "extensionName": {
+    "message": "Video Lister"
+  },
+  "extensionDescription": {
+    "message": "Pokazuje pliki wideo i strumienie z otwartej strony, gotowe do otwarcia albo skopiowania."
+  },
+  "searching": {
+    "message": "Szukam wideo…"
+  },
+  "foundCount": {
+    "message": "Znaleziono: $count$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "7"
+      }
+    }
+  },
+  "noVideos": {
+    "message": "Brak wideo na tej stronie"
+  },
+  "pageNotScannable": {
+    "message": "Nie można przeskanować tej strony"
+  },
+  "copyLink": {
+    "message": "Kopiuj link"
+  },
+  "copyCommand": {
+    "message": "Kopiuj komendę"
+  },
+  "copied": {
+    "message": "Skopiowano!"
+  },
+  "copyFailed": {
+    "message": "Nie udało się"
+  },
+  "streamLabel": {
+    "message": "strumień"
+  },
+  "streamTitleTooltip": {
+    "message": "Strumień adaptacyjny. Skopiuj link i otwórz go w VLC albo mpv.\n$url$",
+    "placeholders": {
+      "url": {
+        "content": "$1",
+        "example": "https://example.com/video.mpd"
+      }
+    }
+  },
+  "copyStreamLinkTooltip": {
+    "message": "Do wklejenia w VLC albo mpv:\n$url$",
+    "placeholders": {
+      "url": {
+        "content": "$1",
+        "example": "https://example.com/video.mpd"
+      }
+    }
+  },
+  "copyCommandTooltip": {
+    "message": "Zapisze obraz i dźwięk jako jeden plik:\n$command$",
+    "placeholders": {
+      "command": {
+        "content": "$1",
+        "example": "yt-dlp \"https://example.com/video.mpd\""
+      }
+    }
+  },
+  "streamHint": {
+    "message": "Strumień to nie plik. Wklej link do VLC albo mpv, żeby obejrzeć od razu, albo użyj komendy, żeby zapisać go jako jeden plik."
+  },
+  "untitledVideo": {
+    "message": "Wideo bez nazwy"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "video-lister",
+  "version": "1.0.0",
+  "description": "Dev tooling for the Video Lister Firefox extension. Not part of the shipped add-on.",
+  "license": "GPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakubMajcher/video-lister.git"
+  },
+  "scripts": {
+    "test": "node test/run.js && node test/run-popup.js",
+    "start": "web-ext run --source-dir .",
+    "lint": "web-ext lint --source-dir . --ignore-files \"test\" \"test/**\" \"tools\" \"tools/**\" \".github/**\" \"docs\" \"docs/**\" \"package*.json\" \"node_modules/**\"",
+    "build": "web-ext build --source-dir . --overwrite-dest --ignore-files \"test\" \"test/**\" \"tools\" \"tools/**\" \".github/**\" \"docs\" \"docs/**\" \"package*.json\" \"node_modules/**\"",
+    "bump": "node tools/bump-version.js"
+  },
+  "devDependencies": {
+    "jsdom": "^26.0.0",
+    "web-ext": "^8.0.0"
+  }
+}

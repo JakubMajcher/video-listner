@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Video Lister">
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="#2563eb"/>
+  <rect x="22" y="34" width="62" height="60" rx="10" fill="#ffffff"/>
+  <path d="M92 50 L112 38 v52 L92 78 z" fill="#ffffff"/>
+  <path d="M46 50 L70 64 L46 78 z" fill="#2563eb"/>
+</svg>

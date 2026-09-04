@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+  Fixture for test/run.js. Every block below pins one detection rule; keep media URLs out
+  of HTML comments, because the markup sweep in content.js would happily match them too.
+-->
+<html lang="pl">
+  <head>
+    <title>Kursy wideo — Example</title>
+    <meta property="og:title" content="Kursy wideo Example" />
+  </head>
+  <body>
+    <h1>Materiały</h1>
+
+    <!-- title attribute wins over everything else -->
+    <video src="videos/intro.mp4" title="Wprowadzenie do kursu"></video>
+
+    <!-- <source> child, titled by the heading right above the player -->
+    <section>
+      <h2>Wykład 2 — sieci neuronowe</h2>
+      <video controls><source src="/media/lecture-02.webm" type="video/webm" /></video>
+    </section>
+
+    <!-- generic link labels; the real name sits in the neighbouring cell -->
+    <!-- second row repeats the first row's URL: must be deduped -->
+    <table>
+      <tr>
+        <td>Wielki film przyrodniczy</td>
+        <td><a href="http://cdn.example.com/big_buck_bunny_1080p.mp4">Download</a></td>
+      </tr>
+      <tr>
+        <td>Kopia tego samego</td>
+        <td><a href="http://cdn.example.com/big_buck_bunny_1080p.mp4">Pobierz</a></td>
+      </tr>
+      <!-- row text is nothing but size and resolution: must lose to the file name -->
+      <tr>
+        <td>5</td>
+        <td>1920 x 1080</td>
+        <td><a href="/vids/Big_Buck_Bunny_1080_10s_5MB.mp4">Download</a></td>
+      </tr>
+    </table>
+
+    <!-- generic label with no usable context: falls back to the cleaned file name,
+         and must NOT reach up to the page <h1> -->
+    <p><a href="clips/raw_footage.final.ogg">Pobierz</a></p>
+
+    <!-- non-Latin title must survive: folding used to blank it out and fall back to
+         the file name, which broke every Cyrillic, CJK or Greek page -->
+    <video src="clips/nocnaya.mp4" title="Ночная погоня"></video>
+
+    <!-- generic label written with diacritics: must be folded before the lookup -->
+    <p><a href="clips/wywiad_koncowy.webm">Ściągnij</a></p>
+
+    <!-- title from the nested image alt; query and hash must not mask the extension -->
+    <p>
+      <a href="https://x.example/movie.mp4?token=abc#t=10"><img alt="Nocny pościg" src="t.jpg" /></a>
+    </p>
+
+    <!-- none of these may show up in the results -->
+    <a href="/dokumentacja.html">Dokumentacja</a>
+    <a href="javascript:void(0)">Nic</a>
+    <video src="blob:https://example.com/9f8-77"></video>
+
+    <!-- cda.pl-style player: manifest hidden in an attribute, slashes escaped like in JSON -->
+    <div id="player" player_data='{"video":{"manifest":"https:\/\/vod99.example.com\/abc\/stream.mpd","file":""}}'></div>
+
+    <!-- media URL reachable only through an inline script -->
+    <script>
+      var cfg = { fallback: "/fallback/backup_take.mp4" };
+    </script>
+  </body>
+</html>

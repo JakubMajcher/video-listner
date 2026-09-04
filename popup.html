@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- SPDX-FileCopyrightText: 2026 Jakub Majcher -->
+<!-- SPDX-License-Identifier: GPL-3.0-only -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Video Lister</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <!-- Elements marked with data-i18n are filled from _locales by popup.js. -->
+    <header class="header">
+      <h1 class="header__title" data-i18n="extensionName"></h1>
+      <span class="header__count" id="count" hidden></span>
+    </header>
+
+    <p class="status" id="status" data-i18n="searching"></p>
+    <ul class="results" id="results"></ul>
+    <p class="hint" id="hint" hidden></p>
+
+    <script src="popup.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+{
+  "extensionName": {
+    "message": "Video Lister",
+    "description": "Name of the extension, shown in the toolbar and the add-ons manager."
+  },
+  "extensionDescription": {
+    "message": "Lists the video files and streams on the page you are looking at, ready to open or copy.",
+    "description": "Short description shown in the add-ons manager and on AMO."
+  },
+  "searching": {
+    "message": "Searching…",
+    "description": "Shown while the page is being scanned."
+  },
+  "foundCount": {
+    "message": "Found: $count$",
+    "description": "Header counter. Deliberately avoids plural forms, which the i18n API cannot express.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "7"
+      }
+    }
+  },
+  "noVideos": {
+    "message": "No video on this page",
+    "description": "Shown when the scan came back empty."
+  },
+  "pageNotScannable": {
+    "message": "This page cannot be scanned",
+    "description": "Shown for privileged pages that reject script injection, such as about: pages."
+  },
+  "copyLink": {
+    "message": "Copy link",
+    "description": "Label of the button that copies the media URL."
+  },
+  "copyCommand": {
+    "message": "Copy command",
+    "description": "Label of the button that copies a yt-dlp command for a stream."
+  },
+  "copied": {
+    "message": "Copied!",
+    "description": "Button label right after a successful copy."
+  },
+  "copyFailed": {
+    "message": "Copy failed",
+    "description": "Button label when the clipboard rejected the write."
+  },
+  "streamLabel": {
+    "message": "stream",
+    "description": "Marks a row as an adaptive manifest rather than a downloadable file."
+  },
+  "streamTitleTooltip": {
+    "message": "Adaptive stream. Copy the link and open it in VLC or mpv.\n$url$",
+    "placeholders": {
+      "url": {
+        "content": "$1",
+        "example": "https://example.com/video.mpd"
+      }
+    }
+  },
+  "copyStreamLinkTooltip": {
+    "message": "Paste into VLC or mpv:\n$url$",
+    "placeholders": {
+      "url": {
+        "content": "$1",
+        "example": "https://example.com/video.mpd"
+      }
+    }
+  },
+  "copyCommandTooltip": {
+    "message": "Saves the video and audio tracks as one file:\n$command$",
+    "placeholders": {
+      "command": {
+        "content": "$1",
+        "example": "yt-dlp \"https://example.com/video.mpd\""
+      }
+    }
+  },
+  "streamHint": {
+    "message": "A stream is not a file. Paste the link into VLC or mpv to watch it now, or use the command to save it as one file.",
+    "description": "Footer note shown only when the results contain a manifest."
+  },
+  "untitledVideo": {
+    "message": "Untitled video",
+    "description": "Fallback title for a URL whose file name cannot be read."
+  }
+}
